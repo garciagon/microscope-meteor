@@ -1,3 +1,6 @@
+'use strict';
+/* globals Template */
+
 Template.postItem.helpers({
     domain: function() {
         var a = document.createElement('a');

@@ -1,3 +1,6 @@
+'use strict';
+/* globals Posts */
+
 if (Posts.find().count() === 0) {
     Posts.insert({
         title: 'Introducing Telescope',
@@ -6,7 +9,8 @@ if (Posts.find().count() === 0) {
 
     Posts.insert({
         title: 'Meteor',
-        url: 'http://meteor.com'
+        url: 'http://meteor.com',
+        author: 'Javier'
     });
 
     Posts.insert({
