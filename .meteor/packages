@@ -21,3 +21,7 @@ twbs:bootstrap          # Framework to organize elements
 underscore              # Complementary library to improve functionally
 
 iron:router
+meteortoys:allthings
+sacha:spin
+ian:accounts-ui-bootstrap-3
+accounts-password
