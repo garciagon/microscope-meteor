@@ -24,8 +24,8 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-    api.use('ecmascript');
-    api.use('tinytest');
-    api.use('garciagon:errors');
-    api.addFiles('errors-tests.js');
+    api.use('garciagon:errors', 'client');
+    api.use(['tinytest', 'test-helpers'], 'client');
+    api.use("templating", "client");
+    api.addFiles('errors_tests.js', 'client');
 });
