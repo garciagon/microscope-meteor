@@ -1,24 +1,6 @@
 'use strict';
 /* globals Posts */
 
-if (Posts.find().count() === 0) {
-    Posts.insert({
-        title: 'Introducing Telescope',
-        url: 'http://sachagreif.com/introducing-telescope/'
-    });
-
-    Posts.insert({
-        title: 'Meteor',
-        url: 'http://meteor.com',
-        author: 'Javier'
-    });
-
-    Posts.insert({
-        title: 'The Meteor Book',
-        url: 'http://themeteorbook.com'
-    });
-}
-
 // Fixture data
 if (Posts.find().count() === 0) {
     var now = new Date().getTime();
@@ -29,13 +11,24 @@ if (Posts.find().count() === 0) {
             name: 'Tom Coleman'
         }
     });
+
     var tom = Meteor.users.findOne(tomId);
+
     var sachaId = Meteor.users.insert({
         profile: {
             name: 'Sacha Greif'
         }
     });
+
     var sacha = Meteor.users.findOne(sachaId);
+
+    var javId = Meteor.users.insert({
+        profile: {
+            name: 'Javier García'
+        }
+    });
+
+    var jav = Meteor.users.findOne(javId);
 
     var telescopeId = Posts.insert({
         title: 'Introducing Telescope',
@@ -79,4 +72,16 @@ if (Posts.find().count() === 0) {
         submitted: new Date(now - 12 * 3600 * 1000),
         commentsCount: 0
     });
+
+    for (var i = 0; i < 10; i++) {
+
+        Posts.insert({
+            title: 'Test post #' + 1,
+            author: jav.profile.name,
+            userId: jav._id,
+            url: 'http://google.com/?q=test-' + i,
+            submitted: new Date(now - i * 3600 * 1000),
+            commentsCount: 0
+        });
+    }
 }
