@@ -76,7 +76,7 @@ if (Posts.find().count() === 0) {
     for (var i = 0; i < 10; i++) {
 
         Posts.insert({
-            title: 'Test post #' + 1,
+            title: 'Test post #' + i,
             author: jav.profile.name,
             userId: jav._id,
             url: 'http://google.com/?q=test-' + i,
