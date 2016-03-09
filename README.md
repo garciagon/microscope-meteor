@@ -5,6 +5,9 @@ First example meteor app
 0.0.1
 
 ### Installation
+It is a initial course from [Discover Meteor](https://www.discovermeteor.com). You will find here the project finished with the course's requeriments.
+
+### Installation
 
 You only need install meteor
 
