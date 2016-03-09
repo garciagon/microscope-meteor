@@ -77,6 +77,11 @@ body {
     float: right;
     margin-top: 7px; }
 
+
+    .post.animate{
+  transition:all 300ms 0ms ease-in;
+}
+
 .comments {
   list-style-type: none;
   margin: 0; }
